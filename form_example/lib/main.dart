@@ -22,49 +22,44 @@ class _FormAppState extends State<FormApp> {
 
   @override
   Widget build(BuildContext context) {
-    Widget dismissButton = new RaisedButton(
-      child: new Text('dismiss'),
-      onPressed: () {
-        Focus.clear(context);
-      }
-    );
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Form Example')
       ),
-      body: new Center(
-        child: new Container(
-          child: new Form(
-            key: _formKey,
-            child: new Block(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              children: <Widget>[
-                new InputFormField(
-                  keyboardType: TextInputType.text,
-                  icon: new Icon(Icons.assignment_ind),
-                  labelText: 'firstname',
-                  hintText: 'Enter your first name',
-                  // style: new TextStyle(),
-                  // hideText: false, // default: false
-                  // isDense: false, // default: false
-                  // autofocus: false, // default: false
-                  // maxLines: 1, // default: 1
-                  // initialValue: InputValue.empty, // default: InputValue.empty
-                  onSaved: (InputValue value) {
-                    print('called when form is saved');
-                  },
-                  validator: (InputValue value) {
-                    print('called whenever the value changes');
-                  }
-                ),
-                new SizedBox(
-                  width: 20.0,
-                  child: dismissButton
-                )
-              ]
+      body: new Form(
+        key: _formKey,
+        child: new Block(
+          padding: const EdgeInsets.all(16.0),
+          children: <Widget>[
+            new InputFormField(
+              keyboardType: TextInputType.text,
+              icon: new Icon(Icons.assignment_ind),
+              labelText: 'firstname',
+              hintText: 'Enter your first name',
+              // style: new TextStyle(),
+              // hideText: false, // default: false
+              // isDense: false, // default: false
+              // autofocus: false, // default: false
+              // maxLines: 1, // default: 1
+              // initialValue: InputValue.empty, // default: InputValue.empty
+              onSaved: (InputValue value) {
+                print('called when form is saved');
+              },
+              validator: (InputValue value) {
+                print('called whenever the value changes');
+              }
+            ),
+            new Container(
+              padding: new EdgeInsets.symmetric(horizontal: 75.0),
+              child: new RaisedButton(
+                child: new Text('dismiss'),
+                onPressed: () {
+                  Focus.clear(context);
+                }
+              )
             )
-          )
-        ),
+          ]
+        )
       )
     );
   }
