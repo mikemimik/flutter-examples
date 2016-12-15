@@ -1,8 +1,4 @@
-# route_example
+# Route Example
 
-A new flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](http://flutter.io/).
+## Issue dealt with
+- Using a drawer to navigate a UI
