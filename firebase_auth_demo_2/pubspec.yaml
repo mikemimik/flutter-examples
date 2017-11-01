@@ -4,6 +4,10 @@ description: A new Flutter project.
 dependencies:
   flutter:
     sdk: flutter
+  google_sign_in: '^0.3.1'
+  firebase_auth: '^0.2.3'
+  redux: '>=2.0.1'
+  flutter_redux: '>=0.3.1'
 
 dev_dependencies:
   flutter_test:

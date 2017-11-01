@@ -4,10 +4,10 @@ description: A new Flutter project.
 dependencies:
   flutter:
     sdk: flutter
-  google_sign_in: "^0.3.1"
-  firebase_auth: "^0.2.3"
-  flutter_flux: ">=4.0.1"
-  shared_preferences: ">=0.2.5"
+  google_sign_in: '^0.3.1'
+  firebase_auth: '^0.2.3'
+  flutter_flux: '>=4.0.1'
+  shared_preferences: '>=0.2.5'
 
 dev_dependencies:
   flutter_test:
